@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		769281921D5400E800CF0FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281911D5400E800CF0FF6 /* AppDelegate.swift */; };
-		769281941D5400E800CF0FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281931D5400E800CF0FF6 /* ViewController.swift */; };
+		769281941D5400E800CF0FF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281931D5400E800CF0FF6 /* LoginViewController.swift */; };
 		769281971D5400E800CF0FF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769281951D5400E800CF0FF6 /* Main.storyboard */; };
 		769281991D5400E800CF0FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769281981D5400E800CF0FF6 /* Assets.xcassets */; };
 		7692819C1D5400E800CF0FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7692819A1D5400E800CF0FF6 /* LaunchScreen.storyboard */; };
 		769281A71D5400E800CF0FF6 /* OTMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281A61D5400E800CF0FF6 /* OTMTests.swift */; };
 		769281B21D5400E800CF0FF6 /* OTMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281B11D5400E800CF0FF6 /* OTMUITests.swift */; };
+		769281C41D54029800CF0FF6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281C31D54029800CF0FF6 /* MapViewController.swift */; };
+		769281C61D5402AE00CF0FF6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281C51D5402AE00CF0FF6 /* ListViewController.swift */; };
+		769281C81D5402D100CF0FF6 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281C71D5402D100CF0FF6 /* AddLocationViewController.swift */; };
+		769281CA1D5402EE00CF0FF6 /* AddURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281C91D5402EE00CF0FF6 /* AddURLViewController.swift */; };
+		769281CC1D54030500CF0FF6 /* OTMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281CB1D54030500CF0FF6 /* OTMClient.swift */; };
+		769281CE1D54031900CF0FF6 /* OTMConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281CD1D54031900CF0FF6 /* OTMConvenience.swift */; };
+		769281D01D54032A00CF0FF6 /* OTMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281CF1D54032A00CF0FF6 /* OTMConstants.swift */; };
+		769281D21D54034100CF0FF6 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281D11D54034100CF0FF6 /* StudentInformation.swift */; };
+		769281D41D54035200CF0FF6 /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281D31D54035200CF0FF6 /* StudentData.swift */; };
+		769281D61D54036600CF0FF6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281D51D54036600CF0FF6 /* UserData.swift */; };
+		769281D81D54038600CF0FF6 /* GDCBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769281D71D54038600CF0FF6 /* GDCBlackBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +47,7 @@
 /* Begin PBXFileReference section */
 		7692818E1D5400E800CF0FF6 /* OTM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769281911D5400E800CF0FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		769281931D5400E800CF0FF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		769281931D5400E800CF0FF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = OTM/LoginViewController.swift; sourceTree = "<group>"; };
 		769281961D5400E800CF0FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		769281981D5400E800CF0FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7692819B1D5400E800CF0FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +58,17 @@
 		769281AD1D5400E800CF0FF6 /* OTMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		769281B11D5400E800CF0FF6 /* OTMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTMUITests.swift; sourceTree = "<group>"; };
 		769281B31D5400E800CF0FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		769281C31D54029800CF0FF6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		769281C51D5402AE00CF0FF6 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		769281C71D5402D100CF0FF6 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		769281C91D5402EE00CF0FF6 /* AddURLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddURLViewController.swift; sourceTree = "<group>"; };
+		769281CB1D54030500CF0FF6 /* OTMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMClient.swift; sourceTree = "<group>"; };
+		769281CD1D54031900CF0FF6 /* OTMConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConvenience.swift; sourceTree = "<group>"; };
+		769281CF1D54032A00CF0FF6 /* OTMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTMConstants.swift; sourceTree = "<group>"; };
+		769281D11D54034100CF0FF6 /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		769281D31D54035200CF0FF6 /* StudentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
+		769281D51D54036600CF0FF6 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		769281D71D54038600CF0FF6 /* GDCBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCBlackBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				769281901D5400E800CF0FF6 /* OTM */,
+				769281C21D5401D500CF0FF6 /* Controller */,
+				769281C11D5401C600CF0FF6 /* View */,
+				769281C01D5401BF00CF0FF6 /* Model */,
+				769281BF1D54012400CF0FF6 /* Assets */,
 				769281A51D5400E800CF0FF6 /* OTMTests */,
 				769281B01D5400E800CF0FF6 /* OTMUITests */,
 				7692818F1D5400E800CF0FF6 /* Products */,
@@ -97,12 +123,9 @@
 		769281901D5400E800CF0FF6 /* OTM */ = {
 			isa = PBXGroup;
 			children = (
-				769281911D5400E800CF0FF6 /* AppDelegate.swift */,
-				769281931D5400E800CF0FF6 /* ViewController.swift */,
-				769281951D5400E800CF0FF6 /* Main.storyboard */,
-				769281981D5400E800CF0FF6 /* Assets.xcassets */,
-				7692819A1D5400E800CF0FF6 /* LaunchScreen.storyboard */,
 				7692819D1D5400E800CF0FF6 /* Info.plist */,
+				769281911D5400E800CF0FF6 /* AppDelegate.swift */,
+				769281D71D54038600CF0FF6 /* GDCBlackBox.swift */,
 			);
 			path = OTM;
 			sourceTree = "<group>";
@@ -123,6 +146,49 @@
 				769281B31D5400E800CF0FF6 /* Info.plist */,
 			);
 			path = OTMUITests;
+			sourceTree = "<group>";
+		};
+		769281BF1D54012400CF0FF6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				769281981D5400E800CF0FF6 /* Assets.xcassets */,
+				769281951D5400E800CF0FF6 /* Main.storyboard */,
+				7692819A1D5400E800CF0FF6 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			path = OTM;
+			sourceTree = "<group>";
+		};
+		769281C01D5401BF00CF0FF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				769281CB1D54030500CF0FF6 /* OTMClient.swift */,
+				769281CD1D54031900CF0FF6 /* OTMConvenience.swift */,
+				769281CF1D54032A00CF0FF6 /* OTMConstants.swift */,
+				769281D11D54034100CF0FF6 /* StudentInformation.swift */,
+				769281D31D54035200CF0FF6 /* StudentData.swift */,
+				769281D51D54036600CF0FF6 /* UserData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		769281C11D5401C600CF0FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		769281C21D5401D500CF0FF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				769281931D5400E800CF0FF6 /* LoginViewController.swift */,
+				769281C31D54029800CF0FF6 /* MapViewController.swift */,
+				769281C51D5402AE00CF0FF6 /* ListViewController.swift */,
+				769281C71D5402D100CF0FF6 /* AddLocationViewController.swift */,
+				769281C91D5402EE00CF0FF6 /* AddURLViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +322,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				769281941D5400E800CF0FF6 /* ViewController.swift in Sources */,
+				769281941D5400E800CF0FF6 /* LoginViewController.swift in Sources */,
+				769281C41D54029800CF0FF6 /* MapViewController.swift in Sources */,
+				769281CA1D5402EE00CF0FF6 /* AddURLViewController.swift in Sources */,
+				769281C81D5402D100CF0FF6 /* AddLocationViewController.swift in Sources */,
+				769281CE1D54031900CF0FF6 /* OTMConvenience.swift in Sources */,
+				769281D81D54038600CF0FF6 /* GDCBlackBox.swift in Sources */,
+				769281CC1D54030500CF0FF6 /* OTMClient.swift in Sources */,
+				769281D61D54036600CF0FF6 /* UserData.swift in Sources */,
+				769281D41D54035200CF0FF6 /* StudentData.swift in Sources */,
+				769281D01D54032A00CF0FF6 /* OTMConstants.swift in Sources */,
+				769281C61D5402AE00CF0FF6 /* ListViewController.swift in Sources */,
+				769281D21D54034100CF0FF6 /* StudentInformation.swift in Sources */,
 				769281921D5400E800CF0FF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
