@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class StudentData {
+    
+    static let sharedInstance = StudentData()
+    
+    var students : [StudentInformation]
+    
+    private init(){
+        students = [StudentInformation]()
+    }
+}

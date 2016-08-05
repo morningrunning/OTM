@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="a7W-tC-rhE">
             <objects>
-                <viewController id="Mzm-mJ-TTp" customClass="LoginViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mzm-mJ-TTp" customClass="LoginViewController" customModule="OTM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nWk-0u-cmV"/>
                         <viewControllerLayoutGuide type="bottom" id="JqO-Pa-KDr"/>
@@ -49,7 +49,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="LoginButtonPressed:" destination="Mzm-mJ-TTp" eventType="touchUpInside" id="3Uy-ys-kWu"/>
+                                    <action selector="loginButtonPressed:" destination="Mzm-mJ-TTp" eventType="touchUpInside" id="9Q1-6m-y9D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APm-EM-LiO">
@@ -69,6 +69,12 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goX-5P-wM1">
+                                <rect key="frame" x="20" y="488" width="560" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -121,7 +127,7 @@
         <!--List-->
         <scene sceneID="Zjv-cd-mIX">
             <objects>
-                <viewController id="SJv-Jl-n4P" customClass="ListViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SJv-Jl-n4P" customClass="ListViewController" customModule="OTM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U78-NJ-Do6"/>
                         <viewControllerLayoutGuide type="bottom" id="c09-u0-qeq"/>
@@ -172,7 +178,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list" id="BD5-rO-C18"/>
                     <connections>
-                        <outlet property="studentsTableView" destination="OWr-3p-kR7" id="bmR-Z0-ZvM"/>
+                        <outlet property="studentsTableView" destination="OWr-3p-kR7" id="f6u-bn-t1H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7o-LK-hBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +188,7 @@
         <!--Map-->
         <scene sceneID="i0O-II-oxh">
             <objects>
-                <viewController id="KuE-xF-qTP" customClass="MapViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KuE-xF-qTP" customClass="MapViewController" customModule="OTM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ITp-N4-ZZ9"/>
                         <viewControllerLayoutGuide type="bottom" id="eV7-EE-ehd"/>
@@ -205,7 +211,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" id="8SQ-gA-dol"/>
                     <connections>
-                        <outlet property="mapView" destination="1UB-xG-Qb9" id="XJ9-Wi-jyY"/>
+                        <outlet property="mapView" destination="1UB-xG-Qb9" id="OHC-kq-W6q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZY-gH-ePw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,7 +240,7 @@
         <!--Add Location View Controller-->
         <scene sceneID="r3Y-H0-s7o">
             <objects>
-                <viewController storyboardIdentifier="AddLocationViewController" id="NXe-x9-e8t" customClass="AddLocationViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddLocationViewController" id="NXe-x9-e8t" customClass="AddLocationViewController" customModule="OTM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rv3-Ha-ldK"/>
                         <viewControllerLayoutGuide type="bottom" id="Bvx-lQ-iKH"/>
@@ -265,23 +271,6 @@
                                 <rect key="frame" x="283" y="540" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-4Z-BGd">
-                                <rect key="frame" x="170" y="540" width="260" height="40"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="9ic-YM-0eC"/>
-                                    <constraint firstAttribute="height" constant="40" id="kj7-zA-1I6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
-                                <inset key="titleEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Find on Map">
-                                    <color key="titleColor" red="0.074509803920000006" green="0.48627450979999998" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="findLocationOnMap:" destination="NXe-x9-e8t" eventType="touchUpInside" id="Qif-H2-q0i"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTh-0T-P6K">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.91764705879999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -295,7 +284,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="deg-eu-E6m">
                                             <color key="tintColor" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="cancelBarButtonPressed:" destination="NXe-x9-e8t" id="7wP-1V-Oqr"/>
+                                                <action selector="cancelBarButtonPressed:" destination="NXe-x9-e8t" id="PJD-D4-7hj"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -334,13 +323,30 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-4Z-BGd">
+                                <rect key="frame" x="170" y="537" width="260" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="9ic-YM-0eC"/>
+                                    <constraint firstAttribute="height" constant="40" id="kj7-zA-1I6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Find on Map">
+                                    <color key="titleColor" red="0.074509803920000006" green="0.48627450979999998" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findLocationOnMap:" destination="NXe-x9-e8t" eventType="touchUpInside" id="R4J-rY-Obh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.91764705879999997" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vTh-0T-P6K" secondAttribute="trailing" id="8yp-Hv-aa6"/>
                             <constraint firstItem="vTh-0T-P6K" firstAttribute="top" secondItem="rv3-Ha-ldK" secondAttribute="bottom" id="F5F-uh-vHk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xeG-6q-tD3" secondAttribute="leading" id="N6h-DF-OuO"/>
-                            <constraint firstItem="bBS-hw-5Xl" firstAttribute="centerY" secondItem="ihA-4Z-BGd" secondAttribute="centerY" constant="-1.5" id="NxP-8b-RBR"/>
+                            <constraint firstItem="bBS-hw-5Xl" firstAttribute="centerY" secondItem="ihA-4Z-BGd" secondAttribute="centerY" constant="1.5" id="NxP-8b-RBR"/>
                             <constraint firstItem="bBS-hw-5Xl" firstAttribute="centerX" secondItem="qW5-2P-gnN" secondAttribute="centerX" constant="1.5" id="QJX-0k-9ij"/>
                             <constraint firstItem="l5j-PE-zm6" firstAttribute="leading" secondItem="qW5-2P-gnN" secondAttribute="leading" id="Qif-bX-ggh"/>
                             <constraint firstItem="l5j-PE-zm6" firstAttribute="top" secondItem="xeG-6q-tD3" secondAttribute="bottom" constant="20" id="UQs-Ae-xLd"/>
@@ -348,7 +354,7 @@
                             <constraint firstItem="xeG-6q-tD3" firstAttribute="top" secondItem="vTh-0T-P6K" secondAttribute="bottom" id="YVv-qe-hko"/>
                             <constraint firstAttribute="trailing" secondItem="l5j-PE-zm6" secondAttribute="trailing" id="Yb9-LN-8hH"/>
                             <constraint firstItem="vTh-0T-P6K" firstAttribute="leading" secondItem="qW5-2P-gnN" secondAttribute="leading" id="aw2-0i-BwT"/>
-                            <constraint firstItem="Bvx-lQ-iKH" firstAttribute="top" secondItem="ihA-4Z-BGd" secondAttribute="bottom" constant="20" id="kFO-l1-fdw"/>
+                            <constraint firstItem="Bvx-lQ-iKH" firstAttribute="top" secondItem="ihA-4Z-BGd" secondAttribute="bottom" constant="23" id="kFO-l1-fdw"/>
                             <constraint firstItem="ihA-4Z-BGd" firstAttribute="centerX" secondItem="qW5-2P-gnN" secondAttribute="centerX" id="mBN-mZ-snh"/>
                         </constraints>
                     </view>
@@ -356,8 +362,8 @@
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="SAX-My-sbJ"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityView" destination="bBS-hw-5Xl" id="oII-EN-MAb"/>
-                        <outlet property="locationTextField" destination="l5j-PE-zm6" id="y7H-c3-afz"/>
+                        <outlet property="activityView" destination="bBS-hw-5Xl" id="8Kh-Q6-DbH"/>
+                        <outlet property="locationTextField" destination="l5j-PE-zm6" id="XVP-ky-mzF"/>
                         <segue destination="Hx1-cC-1cN" kind="presentation" identifier="addURL" id="Eaf-4e-mCv"/>
                     </connections>
                 </viewController>
@@ -368,7 +374,7 @@
         <!--Add URL View Controller-->
         <scene sceneID="7V2-92-dMg">
             <objects>
-                <viewController storyboardIdentifier="AddURLViewController" id="Hx1-cC-1cN" customClass="AddURLViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddURLViewController" id="Hx1-cC-1cN" customClass="AddURLViewController" customModule="OTM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fr5-SR-kSt"/>
                         <viewControllerLayoutGuide type="bottom" id="Pc9-7L-4OO"/>
@@ -390,7 +396,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="tFt-G6-gig">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <action selector="cancelBarButtonPressed:" destination="Hx1-cC-1cN" id="J2K-c1-0RQ"/>
+                                                <action selector="cancelBarButtonPressed:" destination="Hx1-cC-1cN" id="2bp-hp-Rle"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -425,7 +431,7 @@
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="submitButtonPressed:" destination="Hx1-cC-1cN" eventType="touchUpInside" id="Odp-cb-Q8X"/>
+                                    <action selector="submitButtonPressed:" destination="Hx1-cC-1cN" eventType="touchUpInside" id="XJB-AQ-pwV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -446,8 +452,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="studentLocationMapView" destination="fYl-iJ-dL6" id="Cxz-Rr-eEd"/>
-                        <outlet property="urlTextField" destination="4pY-tP-bGe" id="Ll3-kL-bf9"/>
+                        <outlet property="studentLocationMapView" destination="fYl-iJ-dL6" id="Ua7-ca-Gap"/>
+                        <outlet property="urlTextField" destination="4pY-tP-bGe" id="zHq-EW-FQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJi-aG-mYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
