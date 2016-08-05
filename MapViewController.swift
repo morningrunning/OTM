@@ -13,6 +13,7 @@ import MapKit
 class MapViewController: UIViewController {
     
     // MARK: Properties
+    
     let studentData = StudentData.sharedInstance
     
     @IBOutlet weak var mapView: MKMapView!
@@ -52,8 +53,8 @@ class MapViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        // MARK: set region for Map (Default: Bern Bundesplatz Switzerland
-        var center : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 46.9470, longitude: 7.4439)
+        // MARK: set region for Map (Default: Columbus, OH)
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 39.961176, longitude: -82.998794)
         
         if let longitude = studentData.students.first?.longitude,
             let latitude = studentData.students.first?.latitude {

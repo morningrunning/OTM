@@ -30,7 +30,7 @@ class OTMClient : NSObject {
     // MARK: PARSE Requests
     // MARK: PARSE GET
     func taskForParseGETMethod( completionHandlerForParseGET: (result: AnyObject!, error: NSError?) -> Void ) -> Void {
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation?limit=100&order=-updatedAt")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://parse.udacity.com/parse/classes/StudentLocation?limit=100&order=-updatedAt")!)
         request.addValue(Constants.ParseApplicationID, forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue(Constants.ParseRestAPIKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
         
@@ -69,7 +69,7 @@ class OTMClient : NSObject {
     // MARK: PARSE POST
     func taskForParsePOSTMethod( jsonBody: String, completionHandlerForParsePOST: (result: AnyObject!, error: NSError?) -> Void ) -> Void {
         
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://parse.udacity.com/parse/classes/StudentLocation")!)
         request.HTTPMethod = "POST"
         request.addValue(Constants.ParseApplicationID, forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue(Constants.ParseRestAPIKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
