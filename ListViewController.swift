@@ -20,7 +20,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: configure Navigation Bar
+        // MARK: Navigation Bar Config.
         parentViewController!.navigationItem.title = "On The Map"
         
         let logoutBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(self.logout))
@@ -93,7 +93,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let student = studentData.students[indexPath.row]
         
         func alert(error: String){
-            let alert = UIAlertController(title: "Open Safari failed", message: error, preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Open Safari has failed", message: error, preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alert.addAction(defaultAction)
             self.presentViewController(alert, animated: true, completion: nil)

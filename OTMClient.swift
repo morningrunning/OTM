@@ -14,7 +14,7 @@ class OTMClient : NSObject {
     // MARK: Properties
     var session = NSURLSession.sharedSession()
     
-    // authentication properties
+    // MARK: Authentication properties
     var sessionID: String{
         get{
             return (UIApplication.sharedApplication().delegate as! AppDelegate).sessionID
@@ -258,7 +258,7 @@ class OTMClient : NSObject {
         completionHandlerForConvertData(result: parsedResult, error: nil)
     }
     
-    // substitute the key for the value that is contained within the method name
+  
     func subtituteKeyInMethod(method: String, key: String, value: String) -> String? {
         if method.rangeOfString("{\(key)}") != nil {
             return method.stringByReplacingOccurrencesOfString("{\(key)}", withString: value)

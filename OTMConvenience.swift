@@ -13,11 +13,6 @@ import CoreLocation
 extension OTMClient {
     
     // MARK: Udacity Interface Methods
-    // MARK: Authentication (POST) Methods
-    /*
-     Steps for Authentication...
-     https://docs.google.com/document/d/1MECZgeASBDYrbBg7RlRu9zBBLGd3_kfzsN-0FtURqn0/pub?embedded=true
-     */
     func authenticateWithCredentials(userName: String?, password: String?, completionHandlerForAuth: (success: Bool, errorString: String?) -> Void) {
         
         getSessionID(userName, password: password) { (success, sessionID, errorString) in

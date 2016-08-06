@@ -20,7 +20,7 @@ struct StudentInformation   {
     
     // MARK: Initializers
     
-    // construct a StudentInformation from a dictionary
+    // construct StudentInformation dictionary
     init(dictionary: [String:AnyObject]) {
         uniquekey = dictionary[OTMClient.JSONResponseKeys.UniqueKey] as! String
         firstName = dictionary[OTMClient.JSONResponseKeys.FirstName] as! String
@@ -55,12 +55,10 @@ struct StudentInformation   {
         
         var studInf = [StudentInformation]()
         
-        //iterate through StudentInfo dict and create an array of StudentInformation Objects
         for result in results {
             studInf.append(StudentInformation(dictionary: result))
         }
         
         return studInf
     }
-  
 }

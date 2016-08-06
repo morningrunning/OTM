@@ -18,9 +18,7 @@ class AddURLViewController: UIViewController {
     var studentLocation = CLLocation()
     var geocodeLocationSeachString = String()
     
-    // Students Array stored in own model class *FIX after 1st Udacity Review*
     let studentData = StudentData.sharedInstance
-    
     let userData = UserData.sharedInstance
     
     // MARK: View Lifecycle
@@ -79,7 +77,7 @@ class AddURLViewController: UIViewController {
                 }
             }else{
                 performUIUpdatesOnMain{
-                    let alert = UIAlertController(title: "Update of Student Information failed", message: error, preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Update of Student Information has failed", message: error, preferredStyle: .Alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                     
                     alert.addAction(defaultAction)
@@ -98,7 +96,7 @@ class AddURLViewController: UIViewController {
 
 extension AddURLViewController {
     
-    // MARK: Handle Keyboard shift to reach button
+    // MARK: Keyboard
     
     func subscribeToKeyboardNotifications(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddURLViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
@@ -111,14 +109,12 @@ extension AddURLViewController {
     }
     
     func keyboardWillShow(notification: NSNotification){
-        //Keyboard must shift view ONLY if bottom Text field is editing
         if urlTextField.editing {
             view.frame.origin.y = getKeyboardHeight(notification) * -1
         }
     }
     
     func keyboardWillHide(notification: NSNotification){
-        //Shift entire view back to bottom after Keyboard hide
         view.frame.origin.y = 0
     }
     

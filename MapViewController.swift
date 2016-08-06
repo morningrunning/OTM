@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: configure Navigation Bar
+        // MARK: Navigation Bar Config.
         parentViewController!.navigationItem.title = "On The Map"
         
         let logoutBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(self.logout))
@@ -40,7 +40,6 @@ class MapViewController: UIViewController {
         
         self.mapView.delegate = self
         performUIUpdatesOnMain{
-            //Clean Map from previous annotations
             if self.mapView.annotations.count > 0{
                 self.mapView.removeAnnotations(self.mapView.annotations)
             }
@@ -96,12 +95,10 @@ class MapViewController: UIViewController {
             pin.title = "\(student.firstName) \(student.lastName)"
             pin.subtitle = "\(student.mediaURL)"
             
-            //pins.append(pin)
             mapView.addAnnotation(pin)
             mapView.viewForAnnotation(pin)
         }
         
-        //mapView.addAnnotations(pins)
         mapView.reloadInputViews()
     }
     
@@ -124,7 +121,6 @@ class MapViewController: UIViewController {
 
 extension MapViewController: MKMapViewDelegate{
     
-    // MARK: Non standard pin annotation to achieve callout image view
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
         let customPinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "studentPinView")
@@ -143,7 +139,7 @@ extension MapViewController: MKMapViewDelegate{
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         func alert(error: String){
-            let alert = UIAlertController(title: "Open Safari failed", message: error, preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Open Safari has failed", message: error, preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alert.addAction(defaultAction)
             self.presentViewController(alert, animated: true, completion: nil)
