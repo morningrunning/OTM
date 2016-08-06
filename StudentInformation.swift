@@ -20,8 +20,9 @@ struct StudentInformation   {
     
     // MARK: Initializers
     
-    // construct StudentInformation dictionary
-    init(dictionary: [String:AnyObject]) {
+    // StudentInformation dictionary
+    init?(dictionary: [String:AnyObject]) {
+        guard (dictionary[OTMClient.JSONResponseKeys.UniqueKey] as? String) != nil else { return nil }
         uniquekey = dictionary[OTMClient.JSONResponseKeys.UniqueKey] as! String
         firstName = dictionary[OTMClient.JSONResponseKeys.FirstName] as! String
         lastName = dictionary[OTMClient.JSONResponseKeys.LastName] as! String
@@ -52,13 +53,13 @@ struct StudentInformation   {
     }
     
     static func studentInformationFromResults(results: [[String:AnyObject]]) -> [StudentInformation] {
-        
         var studInf = [StudentInformation]()
-        
         for result in results {
-            studInf.append(StudentInformation(dictionary: result))
+            if let studentInf = StudentInformation(dictionary: result) {
+                studInf.append(studentInf)
+            }
         }
-        
         return studInf
     }
+    
 }
