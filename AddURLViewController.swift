@@ -67,7 +67,7 @@ class AddURLViewController: UIViewController {
             if success {
                 performUIUpdatesOnMain{
                     // Add dismissViewController based on review suggestion
-                    let alert = UIAlertController(title: "Successful update !", message: error, preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Success!", message: error, preferredStyle: .Alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .Default) {(_) in
                         self.dismissView()
                     }
